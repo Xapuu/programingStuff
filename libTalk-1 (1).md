@@ -13,6 +13,14 @@ Overall those problems cost a lot of development hours for
  * Fixing design mismatches across different projects
  * Applying design changes across different projects
 
+
+# Check out this links :
+https://hackernoon.com/5-practical-ways-to-share-code-from-npm-to-lerna-and-bit-732f2a4db512
+
+https://blog.sindresorhus.com/small-focused-modules-9238d977a92a
+
+
+
 # WTF should we do now
 * The following examples are applicable in the context of separated FE and BE or repositories that hold both the FE and BE logic
 
