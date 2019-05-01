@@ -24,14 +24,48 @@ https://blog.sindresorhus.com/small-focused-modules-9238d977a92a
 # WTF should we do now
 * The following examples are applicable in the context of separated FE and BE or repositories that hold both the FE and BE logic
 
+## Git Submodules
+
+Git submodules are native-git code sharing strategy which aim is to reuse code from another repository somewhere inside another repository, where the goal is to benefit from already written and central maintained code, without using the mentioned copy-paste strategy (which automatically will remove the benefit of using maintained code)
+
+Pros
+* Share code across git repositories
+* Separate git history per submodule/repository
+
+Pitfalls
+
+* Every time you add a submodule, change its remote’s URL, or change the referenced commit for it, you demand a manual update by every collaborator.
+
+* Forgetting this explicit update can result in silent regressions of the submodule’s referenced commit.
+Commands such as status and diff display precious little info about submodules by default.
+
+* Because lifecycles are separate, updating a submodule inside its container project requires two commits and two pushes.
+
+* Submodule heads are generally detached, so any local update requires various preparatory actions to avoid creating a lost commit.
+
+* Removing a submodule requires several commands and tweaks, some of which are manual and unassisted.
+
+
+For the ones that want how to use git modules the right way check out [Mastering Git submodules][12] and [Git Submodules Pros and Cons][13] and [Git Tools - Submodules][14]
+
 ## Monorepo
 
 "Monorepo" or "Molonolithic repository" is a software development strategy where multiple projects are stored in single repository. We can see implementations of this strategy in projects owned by Google, Facebook, Microsoft, Uber.
 
 ### Advantages
+
+* Single source of true
+   - As the name of the approach we are discussing suggest we are working with only one instance of the code, which makes the instance with which we are working the single source of true.
+   - Also resolve the diamond dependency problem
+
+* Ease of migration
+   - As all the code lives in the same place, the transfer from one source control system to another is seamless process (Gitlab => Github) as we have to migrate just one single repository
+
 * Ease of code reuse
-  
   - As all the codes is stored in the same repository it's very easy to refer pieces of code belonging to one project in another
+
+* Atomic commit possibility
+  - As all of the code base is in one place it is seamless process to modify thousands of files in a single operation (single commit), for example changing class/function/method name
 
 * Simplified dependency management
 
@@ -49,21 +83,18 @@ https://blog.sindresorhus.com/small-focused-modules-9238d977a92a
    - When working in single repository it's easier to integrate **the same tools** related to code linting, analysis etc. , which simplifies the introduction and implementation of common code conventions that improve the code quality
  
 ### Disadvantages
-* Common git version history
- 
+* Common git version history (if git is used)
     * As this strategy uses single repository, there is single git version, which means if git revert is necessary in order to fix introduced bug in a single project, you will revert the whole repository.
   
-* Loss of version information
+* Loss of version information (if git is used)
  
     * Tools that kind of fix this problem is [Lerna][2]
         *15488 stars on GitHub* and [Bit][3] *5721 stars on GitHub, paid tool*
 
 * Tight coupling
-
   * The tight coupling is also disadvantage, because as metioned in monorepo we are aiming to reuse as much code as possible, which means that if we change a single method it will affects all method users across the project 
    
-* Lock per-project security
-
+* Lock per-project security (if git is used)
   * When working in single repository, it's impossible to create permission based access to different sub projects
 
 * Increased build complexity 
@@ -72,8 +103,9 @@ https://blog.sindresorhus.com/small-focused-modules-9238d977a92a
     * Google uses [Piper][4]
     * Facebook made contributions to [Mercurial][5]
     * Microsoft made [VFS for Git][6] 
+You can learn more about the performance issues in this article [15]
 
-Overall this is approach where all projects are living in the same repository, code reusability happens seamlessly, dependency management is child's play, and unicorns take care of the code consistency and everything else.
+Overall this is approach where all projects **are** living in the same repository, code reusability happens seamlessly, dependency management is child's play, and unicorns take care of the code consistency and everything else.
 
 The price for all those benefits is increased build complexity, source management and probably a living hell in the process of migrating your old projects in new `monorepo`, in case you want to adopt this strategy
 
@@ -407,7 +439,12 @@ So my advice is if you are working in enviorment where the code quality and test
 
 Otherwise the best solution is the creation of separate `npm` packages, as you can always fall back to working version, you can manage the scope of permissions per project and lastly but not least the code ownership is much easier to be tracked. 
 
-<!-- # Links -->
+<!-- # Links / Sources-->
+ [Why Google Stores Billions of Lines of Code in a Single Repository][999999]
+
+[999999]:http://delivery.acm.org/10.1145/2860000/2854146/p78-potvin.pdf?ip=213.214.74.127&id=2854146&acc=OA&key=4D4702B0C3E38B35%2E4D4702B0C3E38B35%2E4D4702B0C3E38B35%2E5945DC2EABF3343C&__acm__=1556711275_b8463755a59162a911f853d20d9ae0a6
+
+
 [1]: https://dl.acm.org/citation.cfm?id=3133908&picked=formats
 [2]:https://lernajs.io/
 [3]:https://bitsrc.io/
@@ -419,3 +456,7 @@ Otherwise the best solution is the creation of separate `npm` packages, as you c
 [9]: https://docs.google.com/document/d/1CZC2rcpxffTDfRDs6p1cfbmKNLA6x5O-NtkJglDaBVs/preview
 [10]:https://angular.io/guide/libraries
 [11]:https://angular.io/guide/component-styles#view-encapsulation
+[12]: https://medium.com/@porteneuve/mastering-git-submodules-34c65e940407
+[13]:http://jr0cket.co.uk/2014/05/git-submodules-pros-and-cons.html
+[14]: https://git-scm.com/book/en/v2/Git-Tools-Submodules
+[15]: https://bitbucket.org/blog/monorepos-in-git?_ga=2.184294502.155973345.1556708288-1389070012.1556708288
