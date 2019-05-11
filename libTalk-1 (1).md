@@ -113,7 +113,7 @@ The price for all those benefits is increased build complexity, source managemen
 
 ## nrwl to the rescue 
 
-First thing first we are not talking about actual narwhals, that swim in the oceans , but about the Nrwl extensions for Angular also known as [**Nx**][12] and why we should keep an eye on them .
+First thing first we are not talking about actual narwhals, that swim in the oceans, but about the Nrwl extensions for Angular also known as [**Nx**][12] and why we should keep an eye on them .
 
 !!! Note: We are talking about the benefits of integrating nx in the context of angular applications with above average of size codebase.
 
@@ -129,7 +129,7 @@ For those of you guys, that are angular driven beings the name [Victor Savkin][h
 `Nx` is set of angular @schematics, which provides the user with the opportunity to build nx-workspace, which is pretty much regular angular project, but on steroids (here we are talking about ng cli generate projects prior angular V6), as said it's just a set of @schematics extending the ones in the cli, which means it's still a normal angular project. As of ng cli V6 part of the nrwl provided functionality comes build in with the client. 
 `Nx` also comes with `NgRx` which is library for data presistence and a set of binaries (cmd commands) for code formating and linting
 
-### What architecure Nx sugests
+### What architecure Nx suggests
 
 The people from Nrwl had identified this problem that we are tackling here some time ago, and suggested a special kind of monorepo architecture, which follow some interesting code organization patterns. 
 
@@ -308,9 +308,9 @@ This will generate an empty angular workspace, after that we without leaving the
 ```
 cd <workspaceName>
 
-ng g library <libraryName> --prefix=<customPrefix> --styles=scss --viewEncapsulation=none
+ng g library <libraryName> --prefix=<customPrefix> --style=scss --viewEncapsulation=none
 
-ng g application <applicationName> --styles=scss
+ng g application <applicationName> --style=scss
 ```
 
 At this point our workpspace folder structure should look like
