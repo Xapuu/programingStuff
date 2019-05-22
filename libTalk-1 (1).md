@@ -90,9 +90,6 @@ For the ones that want how to use git modules the right way check out [Mastering
  
     * Tools that kind of fix this problem is [Lerna][2]
         *15488 stars on GitHub* and [Bit][3] *5721 stars on GitHub, paid tool*
-
-* Tight coupling
-  * The tight coupling is also disadvantage, because as metioned in monorepo we are aiming to reuse as much code as possible, which means that if we change a single method it will affects all method users across the project 
    
 * Lock per-project security (if git is used)
   * When working in single repository, it's impossible to create permission based access to different sub projects
@@ -137,7 +134,7 @@ The people from Nrwl had identified this problem that we are tackling here some 
 
 ## **Step 1** installation
 
-To be able to use the nx @scematics first we must install the [**ng-cli**][7] and their npm package holding the nrwl @schematics
+To be able to use the nx @schematics first we must install the [**ng-cli**][7] and their npm package holding the nrwl @schematics
 
 ```
 npm install -g @angular/cli @nrwl/schematics
@@ -152,8 +149,8 @@ create-nx-workspace ${your-workpsace-name}
 ```
 
 As mentioned the nx is something like **superset** of the **ng-cli** so the process of generating new project is similar to the one when generating project with the cli, so there will be some questions asked along the way:
- * Style preprocesor - CSS/SCSS/SASS/LESS/Stylus
- * Workpsace scope 
+ * Style preprocessor - CSS/SCSS/SASS/LESS/Stylus
+ * Workspace scope 
    
     * This will be the name of the scpoe trough which you will be able to access the project, for example if the scope is `greatApp` you will be able to access the assets of the project trough `@greatApp/...`
 
@@ -180,7 +177,7 @@ Let's look at would look like nx-workspace structure
 
 Now let's decipher the workspace structure
 
-The two most important things in the structe are the **apps** and **libs** folders
+The two most important things in the structure are the **apps** and **libs** folders
 
 ## apps
 
@@ -188,12 +185,12 @@ As the name suggest the apps folder holds multiple apps, where an app should be 
 
 ## libs
 
-In the libs folder we hold all of our libs where **lib** is set of files consumed by apps, they are similar to `node_modules`, they are bundled in the artifact, that we mentioned, or can be deployed on the `npm` for whatever purpouse. Their used in order to partion our code in smaller units, of easily reusable and maintainable blocks.
+In the libs folder we hold all of our libs where **lib** is set of files consumed by apps, they are similar to `node_modules`, they are bundled in the artifact, that we mentioned, or can be deployed on the `npm` for whatever purpose. Their used in order to partion our code in smaller units, of easily reusable and maintainable blocks.
 
-Acoording to **nrwl** recommendentions there should be 4 library types in nx-workspace are : feature, data-access, ui, and util.
+According to **nrwl** recommendations there should be 4 library types in nx-workspace are : feature, data-access, ui, and util.
  
  * Feature libraries - library in which a whole feature is implemented, for example a feature might be a cart logic (in the context of shop applications) where you have the same shopping cart in multiple applications
- * Ui libraries - library that holds only presentational components, for example a button componet
+ * Ui libraries - library that holds only presentational components, for example a button component
  * Data-access libraries - library that holds services, utilities, also state management services
  * Utility libraries - as the name suggests this is a library that holds utility functions services etc.
 
@@ -248,7 +245,7 @@ Import your lib in your app and start using it :)
 
 ## NPM libraries
 
-The npm libraries are basicity a way of code sharing in the **js** ecosystem, which purpose is to tackle common problems, without the need of reinventing solutions, that already exist.
+The npm libraries are basically a way of code sharing in the **js** ecosystem, which purpose is to tackle common problems, without the need of reinventing solutions, that already exist.
 
 So basically by creating and sharing one, we can tackle common problems across all our projects by implementing it just once.
 
@@ -427,15 +424,15 @@ Against the angular developer common sense, when building component based librar
 
 ## So many options but what is the best decision
 
-So as we have already seen so far there multiple options when choosing code sharing strageies, (there some more which were not discussed) so far and each one is related to major from architecture point of view decision.
+So as we have already seen so far there multiple options when choosing code sharing strategies, (there some more which were not discussed) so far and each one is related to major from architecture point of view decision.
 
-If we are going for custom momorepo solution, we are granted the absolute freedom to do whatever we want, and satisfy all our requirements in custom way. The negative side effect is that we must implement everything from zero (building processes, testing processes and so), by doing so we are risking to create unmaintainable codebase, because we unintenotaly missed some best practice, which might lead to multiple rewrities of our code base which will lead to countless of lost development ours.
+If we are going for custom monorepo solution, we are granted the absolute freedom to do whatever we want, and satisfy all our requirements in custom way. The negative side effect is that we must implement everything from zero (building processes, testing processes and so on), by doing so we are risking to create unmaintainable codebase, because we unintentionally missed some key best practices, which might lead to multiple redos of our code base which will lead to countless of lost development ours.
 
-If we are going for the `Nx` strategy and follow their guidelines when building an nx project we are limiting the chances of creating an unmaintable code base, we reduce the configuration part (build, test etc).
+If we are going for the `Nx` strategy and follow their guidelines when building an nx project we are limiting the chances of creating an unmaintainable code base, we reduce the configuration part (build, test etc).
 
-If we go for the npm strategy, we risk that there might be some delays in the development process and we won't  be able to use all of the code reusage benefits of the previous approches , but this strategy allows looser coupling and easier to track code ownership plus much better version controls.
+If we go for the npm strategy, we risk that there might be some delays in the development process and we won't  be able to use all of the code reusage benefits of the previous approaches , but this strategy allows looser coupling and easier to track code ownership plus much better version controls.
 
-So my advice is if you are working in enviorment where the code quality and testing is the top priority instead the introduction of new functionalities, go for custom monorepo or try `Nx`, which is really great tool.
+So my advice is if you are working in environment where the code quality and testing is the top priority instead the introduction of new functionalities, go for custom monorepo or try `Nx`, which is really great tool.
 
 Otherwise the best solution is the creation of separate `npm` packages, as you can always fall back to working version, you can manage the scope of permissions per project and lastly but not least the code ownership is much easier to be tracked. 
 
