@@ -14,13 +14,6 @@ Overall those problems cost a lot of development hours for
  * Applying design changes across different projects
 
 
-# Check out this links :
-https://hackernoon.com/5-practical-ways-to-share-code-from-npm-to-lerna-and-bit-732f2a4db512
-
-https://blog.sindresorhus.com/small-focused-modules-9238d977a92a
-
-
-
 # WTF should we do now
 * The following examples are applicable in the context of separated FE and BE or repositories that hold both the FE and BE logic
 
@@ -39,7 +32,7 @@ Pitfalls
 * Forgetting this explicit update can result in silent regressions of the submodule’s referenced commit.
 Commands such as status and diff display precious little info about submodules by default.
 
-* Because lifecycles are separate, updating a submodule inside its container project requires two commits and two pushes.
+* Because life cycles are separate, updating a submodule inside its container project requires two commits and two pushes.
 
 * Submodule heads are generally detached, so any local update requires various preparatory actions to avoid creating a lost commit.
 
@@ -55,7 +48,7 @@ For the ones that want how to use git modules the right way check out [Mastering
 ### Advantages
 
 * Single source of true
-   - As the name of the approach we are discussing suggest we are working with only one instance of the code, which makes the instance with which we are working the single source of true.
+   - As the name of the approach we are discussing suggests we are working with only one instance of the code, which makes that instance with which we are working the single source of true.
    - Also resolve the diamond dependency problem
 
 * Ease of migration
@@ -69,14 +62,14 @@ For the ones that want how to use git modules the right way check out [Mastering
 
 * Simplified dependency management
 
-  - As mentioned all projects are in single repository and thanks to that it is possible to share single package json file and single `node_modules` folder, which is beneficial because this strategy resolves two trivial problems, which are turrning in non-trivial matter as the code base grows.
+  - As mentioned all projects are in single repository and thanks to that it is possible to share single package json file and single `node_modules` folder, which is beneficial because this strategy resolves two trivial problems, which are turning in non-trivial matter as the code base grows.
     
     - The size of the project locally hosted
     - Version management
      
 * Collaborations across teams / Flexible code ownership
 
-  - By choosing the "Monorepoic" path, all teams are enforced to collaborate with each other which indirectly improves the code quality and raises each individual (developer)  understandig of the system as whole. (The second part is very beneficial and often neglected when talking about big systems that depend on each other)
+  - By choosing the "Monorepoic" path, all teams are enforced to collaborate with each other which indirectly improves the code quality and raises each individual (developer)  understanding of the system as whole. (The second part is very beneficial and often neglected when talking about big systems that depend on each other)
 
 * Easier integration of tools
    
@@ -152,7 +145,7 @@ As mentioned the nx is something like **superset** of the **ng-cli** so the proc
  * Style preprocessor - CSS/SCSS/SASS/LESS/Stylus
  * Workspace scope 
    
-    * This will be the name of the scpoe trough which you will be able to access the project, for example if the scope is `greatApp` you will be able to access the assets of the project trough `@greatApp/...`
+    * This will be the name of the scope trough which you will be able to access the project, for example if the scope is `greatApp` you will be able to access the assets of the project trough `@greatApp/...`
 
 * Type of project
 
@@ -185,7 +178,7 @@ As the name suggest the apps folder holds multiple apps, where an app should be 
 
 ## libs
 
-In the libs folder we hold all of our libs where **lib** is set of files consumed by apps, they are similar to `node_modules`, they are bundled in the artifact, that we mentioned, or can be deployed on the `npm` for whatever purpose. Their used in order to partion our code in smaller units, of easily reusable and maintainable blocks.
+In the libs folder we hold all of our libs where **lib** is set of files consumed by apps, they are similar to `node_modules`, they are bundled in the artifact, that we mentioned, or can be deployed on the `npm` for whatever purpose. Their used in order to partition our code in smaller units, of easily reusable and maintainable blocks.
 
 According to **nrwl** recommendations there should be 4 library types in nx-workspace are : feature, data-access, ui, and util.
  
@@ -194,7 +187,7 @@ According to **nrwl** recommendations there should be 4 library types in nx-work
  * Data-access libraries - library that holds services, utilities, also state management services
  * Utility libraries - as the name suggests this is a library that holds utility functions services etc.
 
-In some of nrwl whitepapers papers there are also some suggestions for holding the back-end application logic in the same repository in order to further optimize the code reusability, but this strategies won't be further examined here.
+In some of nrwl white-papers papers there are also some suggestions for holding the back-end application logic in the same repository in order to further optimize the code reusability, but this strategies won't be further examined here.
 
 ## Step 3 adding projects
 
@@ -211,7 +204,7 @@ Here you will be walked trough another set of configurations
  * Select sub-directory if desired (inside the apps directory)
  * Unit Test runner Karma/Jest
  * E2E test runner Cypress/Protractor
- * Select tag (linting purpouses)
+ * Select tag (linting purposes)
 
     * Note you can add more configuration to the creation process 
 
@@ -227,7 +220,7 @@ ng generate library mylib # same thing
 Here you will be walked trough another set of configurations
  * Select sub-directory if desired (inside the libs directory)
  * Select type of lib Angular/React/Typescript
- * Select tag (linting purpouses)
+ * Select tag (linting purposes)
  * Unit Test runner Karma/Jest
 
 ## Step 4 use the lib
@@ -270,9 +263,7 @@ As we are living in a world where the heaviest thing in the world is the [**npm 
 
 As of version 6+ [**ng cli**][7] provides out of the box, the opportunity to create **Angular** libraries via the [**ng-packagr**][8] library. Basically [**ng-packagr**][8] is tool for creating node modules following the [**Angular Package Format**][9]. Without getting in too much details, this means that we will have an easy way to build and bundle production ready [libraries][10] just with few commands. 
 
-
 ## Library
-
 
 ### Do I need to build library, check whats true for your projects
  
@@ -329,7 +320,7 @@ At this point our workpspace folder structure should look like
     tslint.json
 ```
 
-Lets break down what all those commands mean and why we are using them. First the `ng g library` is the way for generating a library trough [**ng-packagr**][8] , that we mentioned earlier, after that we are passing the `-style=scss` so that we can generate customislabel styles easier later on in our library, the `-viewEncapsulation=none` is used to enable other users to have some access over our components, so that they can modify them if needed, this is not mandatory thing but people will treat you a beer later on if you do this.
+Lets break down what all those commands mean and why we are using them. First the `ng g library` is the way for generating a library trough [**ng-packagr**][8] , that we mentioned earlier, after that we are passing the `-style=scss` so that we can generate customizable styles easier later on in our library, the `-viewEncapsulation=none` is used to enable other users to have some access over our components, so that they can modify them if needed, this is not mandatory thing but people will treat you a beer later on if you do this.
 
 The other command that we are using `ng g application` is used in order to create another project in our workspace, in which we will develop our components, and can use as app for writing some documentation, that will be easily accessible for the people that will use our code, without the need of digging in the source.
 
@@ -408,7 +399,9 @@ For example there is possibility to have different versions of angular for your 
 
 Add prefix to all your classes. As we mentioned and saw earlier the ngLibrary is just bundled set of ngModules, that will be imported in other projects in order to be used there, which means that the components that are shared from the library module will share the namespace of the project where imported, for example if we have component called `Table` in our library and in the project where our library is imported, we will get beautiful error message, reminding us that our class names must be unique (might do demo), which is pretty inconvenient for the library users, because in this case they will have the responsibility to rename their `Table` component to something else (assuming that we dont have direct access to the library, or do other workaround)
 
- * [View encapsulation][11]
+ <!-- * [View encapsulation][11]
+
+TODO: Check pros and cons
 
 Angular components have the option to define their view encapsulation, or in other words that defines the way they interaction with  the application styles.
 
@@ -417,7 +410,7 @@ As we know this is one of the most important features of modern front-end framew
 Against the angular developer common sense, when building component based library we go against the rules, and it's kind of preferable to use `None` encapsulation, which means that there will be no component-based style protection over the html in our component. You might ask why would one want to this, actually there are 2 reasons:
  ** First by doing so you enable the users of your library to have some freedom over what the component would look like in their application, which is not always bad.  
 
- ** Second by doing so (and with some basic sass knowledge) you are enabling yourself to create straight forward and robust way of theming your application. 
+ ** Second by doing so (and with some basic sass knowledge) you are enabling yourself to create straight forward and robust way of theming your application.  -->
 
 # Demo
 
@@ -457,3 +450,8 @@ Otherwise the best solution is the creation of separate `npm` packages, as you c
 [13]:http://jr0cket.co.uk/2014/05/git-submodules-pros-and-cons.html
 [14]: https://git-scm.com/book/en/v2/Git-Tools-Submodules
 [15]: https://bitbucket.org/blog/monorepos-in-git?_ga=2.184294502.155973345.1556708288-1389070012.1556708288
+
+
+# Check out this links :
+https://hackernoon.com/5-practical-ways-to-share-code-from-npm-to-lerna-and-bit-732f2a4db512
+https://blog.sindresorhus.com/small-focused-modules-9238d977a92a
