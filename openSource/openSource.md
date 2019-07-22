@@ -19,8 +19,6 @@
  * Community
     The open source projects are based on varying communities united around a common purpous, where the common community goals supersede the individual interests and agendas
 
-# Open source in terms of code
-
 ## Open source & Close source
 
 'Open source software' is usually a free piece of code, following the previously mentioned principle, open to the public for usage, modification and extension, which usage is bounded by some kind of license.
@@ -48,20 +46,51 @@ On the other hand  'Closed source software' is software which uses closely guard
 
 ## How does open source companies make money
 
+As we are talking about open source and how cool it is, maybe in many of you arises the question how sustainable are those open-source stuff and as everything else at some point probably those projects need some cash to keep them up and kicking, so from where is this cash coming and can an organization live by creating open source projects.
+
 1 Support
+ 
+  Some open source project are making their earnings by providing support and on sight paid trainings to the consumers of the software. Fot example if you are company that wants to adopt some open software technology that is to hard to be adopted or the cost to train specialists from zero on their own is to high, for the business is more preferable to pay some experienced specialists to implement the initial setups (installations and etc) and train some specialist, showing them their know-how. 
+
+Example: Apache’s Hadoop which is free to use, but is too complex for initial adoption, which is a software designed to detect and handle failures at the application layer, delivering a highly-available service on top of a cluster of computers, each of which may be prone to failures.
+
 2 Hosting
-3 Restrictive licensing
-4 Open-core
-5 Hybrid licensing
-6 Advertisement partners 
-7 Donations
-8 Pay what you want
+ 
+ Some open source companies provide hosting services for their products, which are paid. Good example for this kind of company is mongoDB, on top of support (the first type of OS income method) they also provide hosting services for their database in the form of product called Atlas.
 
-# Open source as part of successful business
+3 Open-core
 
-# How does it help us
+ This concept lies around the strategy that only part of the software whole software `The Core` is free and the rest of the functionality is paid. 
+
+ For example if you have some kind UI library, and let's say it's core functionality is to have some tables and stuff, which are free of charge for all users and there is a `non-core` or in other words paid set of components for data visualization, that can be used as complimentary components to the core version.
+
+4 Advertisement partners 
+
+   Some projects are earning money for their causes, by allowing some kind of advertisement on their project pages, good example is [`VueJs`][4] which is project primary funded by sponsors, which are listed in projects related pages.
+
+5 Donations/ Pay what you want
+
+ As the name here the consumers have the opportunity to become patrons of an open source project trough one time donations or trough regular payments. Open source projects that function in this category are Vim and webpack
+
 
 # How to contribute
+
+## How does it help us
+ 
+  * Pure satisfaction
+
+Something specific about professionals from all kind spheres is that at some point, the so called professionals strive to share their knowledge and in the case of software development this is quite easy, just contribute to open source projects, help other people to tackle their problems, by sharing your knowledge and helping out in the process
+ 
+ * Self improvement and career growth
+
+By tackling other people problems, usually the one contributing practice and extends his skills, by gaining new knowledge trough solving problems, that he had not hit until this moment. Also by leaving your mark in the open source world, you are bound to communicate with a lot of professionals form the community, which can further help with your career growth.  
+If (if you are interested in open source) you continuously contribute to open source project, their will chances for your recognition as professional, which can lead to job opportunities and so on, their many success career stories started from open source projects, if you don't believe me just google it.
+
+## What is contributing 
+
+ Usually when people are talking about open source projects and contributions, there is the common misunderstanding that all contributions are code related. 
+
+# Open source in terms of code
 
 # How to become amazing contributor 
  * Have a real problem to solve, business need, or some type of commercially-driven motivation.
@@ -82,14 +111,22 @@ On the other hand  'Closed source software' is software which uses closely guard
  * OS - Linux (see others)
 # OpenSource licenses
 
+# Take away
 
+We talked a lot about open source and stuff, but why is it powerful, if i can interpreter a famous Bulgarian saying  "The unity creates strength" and open source is all about uniting different people under the same banners, so guys embrace and be part of the united open source community, because only united we are truly powerful!
+
+
+** SUSTAINABLE FREE AND OPEN SOURCE COMMUNITY :https://sfosc.org/
 ** Look at this (trends by keyword open-source) : https://trends.google.bg/trends/explore?q=open%20source
 ** Look at HacktoberFest
-
+** First timers issues : https://www.firsttimersonly.com/
+** Help wanted or where to contribute : http://github-help-wanted.com/
+** Me answering to stackoverflow stuff : https://codesandbox.io/u/Xapuu/sandboxes
 
 [1]:opensource.com
 [2]:https://opensource.com/life/11/3/how-become-amazing-contributor-open-source-project
-
+[3]:https://kubernetes.io/
+[4]:https://github.com/vuejs/vue
 <!-- How does open source company make money -->
 [77]:https://blog.timescale.com/how-open-source-software-makes-money-time-series-database-f3e4be409467/
 <!-- List of open source companies with revenue of $100M+ -->
