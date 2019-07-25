@@ -20,7 +20,7 @@
 - Community
   The open source projects are based on varying communities united around a common purpous, where the common community goals supersede the individual interests and agendas
 
-## Open source & Close source
+## Open & Close source
 
 'Open source software' is usually a free piece of code, following the previously mentioned principle, open to the public for usage, modification and extension, which usage is bounded by some kind of license.
 
@@ -73,11 +73,11 @@ Some projects are earning money for their causes, by allowing some kind of adver
 
 As the name here the consumers have the opportunity to become patrons of an open source project trough one time donations or trough regular payments. Open source projects that function in this category are Vim and webpack
 
-# How to contribute
+# Basics
 
 ## Players
 
-In order to understand the role of a `Contributor` , we must take a quick of all the usual suspects, involved in an open source project
+In order to understand the role of a `Contributor` , we must take a quick review of all primary roles involved in an open source project
 
 Typically there are five categories of people:
 
@@ -130,6 +130,26 @@ There is always the possibility to grab some issues and just fix it, with the he
 
 # Open source in terms of code
 
+Enough marketing let's talk about how contributions are done IRL
+
+## Know your stack
+
+First thing first the enthusiasm is a must, but you must be aware of you own knowledge and capabilities in order to find out in what kind of projects you can get involve and how you can fit in the contributors community. For example if you are knowledgeable C++, you will be very well received in projects like [node][5] under the issue [c++][6] label, if you have good understanding of [ngrx][7] and are good with photoshop you might be able to part take in resolving the following [issue][8]. If you don't feel confident about writing code, but are passionate about js, you can always proof read some open source books like [You Dont'Know JS series][9] or [Functional Light js][10] created by [getify][11].
+
+## Get to know the project
+
+After finding a project that you are passionate about, it's a must to get familiar with projects rules. Doing this i a trivial task, go to the project repository and read the `README.md` this file usually holds a detailed info about how to get started. There is a high probability that you will also be able to find a `CONTRIBUTING.md` and `CODE_OF_CONDUCT.md` files which holds all the rules that your PR must allign to in order for them to be accepted.
+
+Keep in mind that as a contributor you are the one obligated to follow the projects rules and not the other way around, so don't get frustrated if your PR-s are rejected at first, if this happens, as the OS community is very welcoming to new contributors, a more experienced contributor or maintainer will probably provide you with guidance to fix the issues around your PR. If you think that the project's workflows are wrong, you can also create PR to the mentioned above rule sets.
+
+## Find an issue
+
+As mentioned before, a must for any OS project is a system for issues tracking and collaboration, if we take for example the [GitHub][12] platform, each project has an issues section where you can log a new issue or find existing one. The more developed project, have a rich set of labels describing the difficulty or the subject of an issue, by using those labels you can filter issues in such way, that you can find the ones falling in your skill set.
+
+If you don't have a favorite project, or just want to contribute something for the fun, but don't know precisely where you can apply your knowledge, you can use one of the following platform for issue huntig :
+
+## Earn cash
+
 # How to become amazing contributor
 
 - Have a real problem to solve, business need, or some type of commercially-driven motivation.
@@ -142,7 +162,7 @@ There is always the possibility to grab some issues and just fix it, with the he
 - Be honest and vocal about your available time and skills.
 - Be a doer, not a talker or a troll.
 - Finish what you started, don't give up.
-  - This rules were listed by `Daniel Doubrovkine` at [opensource.com][2]
+- This rules were listed by `Daniel Doubrovkine` at [opensource.com][2]
 
 # OpenSource projects
 
@@ -167,6 +187,15 @@ We talked a lot about open source and stuff, but why is it powerful, if i can in
 [2]: https://opensource.com/life/11/3/how-become-amazing-contributor-open-source-project
 [3]: https://kubernetes.io/
 [4]: https://github.com/vuejs/vue
+[5]: https://github.com/nodejs
+[6]: https://github.com/nodejs/node/labels?utf8=%E2%9C%93&q=c%2B%2B
+[7]: https://github.com/ngrx
+[8]: https://github.com/ngrx/platform/pull/2031
+[9]: https://github.com/getify/You-Dont-Know-JS
+[10]: https://github.com/getify/Functional-Light-JS
+[11]: https://github.com/getify
+[12]: https://github.com/
+[13]: http://issuehub.io/
 
 <!-- How does open source company make money -->
 
@@ -176,3 +205,5 @@ We talked a lot about open source and stuff, but why is it powerful, if i can in
 
 [88]: https://docs.google.com/spreadsheets/d/17nKMpi_Dh5slCqzLSFBoWMxNvWiwt2R-t4e_l7LPLhU/edit#gid=0
 [99]: https://api2cart.com/business/5-differences-between-open-source-and-closed-source-software/
+
+<!-- !! Checkout revealjs -->
