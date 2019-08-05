@@ -9,7 +9,7 @@
   All information (about the OS project) should be transparent and easily accessible, in order for the OS project consumers to be able to do their best at their work and also to be able to extend, the ideas of the project, by modifying/extending/optimizing the already existing ideas/code/project.
 
 - Collaboration
-  There should be a process, enforcing some kind of standard, enabling the existing consumers of the OS project/stakeholders, to be able to enhance the project. By having this kind of process all stakeholders have means to tackle problems together, that are unsolvable by one person alone (or on a level of single organization)
+  There should be a process, enforcing some kind of standard, enabling the existing consumers of the OS project/stakeholders, to be able to enhance the project. By having this kind of process, all stakeholders have means to tackle the common problems together, problems which are unsolvable by a single person (or inside of single organization)
 
 - Release early and often
   An iterative release approach is recommended, this approach gives the collaborators the opportunity to experiment with new stuff, which leads to new discoveries, better solutions or in other words "The more you do, the more you learn, the better you are"
@@ -18,32 +18,40 @@
   Although the "open source" is open to all ideas and contributors, only best ideas and solutions are those that are included, respectively the best projects are the ones that survive and continue to grow
 
 - Community
-  The open source projects are based on varying communities united around a common purpous, where the common community goals supersede the individual interests and agendas
+  The open source projects are based on varying communities united around a common purpose, where the common goals supersede the individual interests and agendas
 
 ## Open & Close source
 
-'Open source software' is usually a free piece of code, following the previously mentioned principle, open to the public for usage, modification and extension, which usage is bounded by some kind of license.
+'Open source software' is usually a free piece of code, following the previously mentioned principles, open to the public, under a license agreement, that allows usage, modification and extension.
 
-On the other hand 'Closed source software' is software which uses closely guarded code, accessible only by the code owners, for modifications and extensions.
+On the other hand 'Closed source software' is software which uses closely guarded code, accessible only by the code owners.
 
 ### Comparison
 
 - Pricing:
-  - The open source projects are free of charge.
-  - The closed source projects are usually paid projects, which price depends on the complexity of the software and other market factors, which are not focused by the current topic.
+
+  - The open source projects are free of charge, there are still organizations that are making their living from OSS and we will look further in this topic latter on.
+  - The closed source projects are usually paid projects, the price depend on the complexity of the software and other market factors, which will not be further discussed.
+
 - Security
 
-  - As the open source project are available to the public, for modification, fixing, and extensions, usually security related issues are easier to be found and fixed quickly after that, as this issues are usually tackled not only by the developers that maintain the project, but also by the stakeholders affected by the issue, that have willingness or the need to resolve it. The other side of the coin is that malicious developers, which have access to the source code might try to exploit such issues in ways, that may affected this project's users in negative way.
-  - Closed source project are more secured because of their 'closely guarded source', that makes finding exploits in their software harder, but on the other hand those companies might be slower to fix known issues or find unknown ones, as only the vendor is able to access, modify and apply fixes to the source code.
+  - As the "source" of "Open Source Projects" is freely and easily accessible by design, usually security related issues are easier to be spotted, as any consumer is free to inspect the code and find vulnerabilities. The periods for fixing those issues are also shorter, as this issues are usually tackled not only by the maintainers of the project, but also by the affected stakeholders, which have the willingness or the urge to resolve the issue.
+
+    The flip side of the coin are the malicious developers, that have access to the source code and might try to exploit such issues in ways, that may affect negatively the project consumers.
+
+  - Closed source project are more secured because of their 'closely guarded source', this makes the process of finding exploits harder, but this also takes it's toll as most likely those types of projects will resolve security issues in a slower manner (compared to the OSS), usually because of the limited resources available to the vendor.
 
 - Quality of support
-- - Open source software projects usually in terms of support, leave the consumers on their own. The support comes from the project's documentation, forums, or paid developer experts/consultant.
+
+  - In terms of support OSS projects usually, leave the consumers on their own. The support comes from the project's documentation, forums, or paid developer experts/consultant.
   - Closed source projects typicaly provide top-notch support, as usually the cost paid for the product includes an option to contact support center and get their problems resolved.
 
 - Usability
 
-  - Open source projects are usually created from developers for developers or technical people, which occasionally leads to that, that segments of the software documentation is incomplete, different segments are written inconsistent style. Usually the reason for those flaws is thanks to the big variety of contributors, the lack of technical writers involved in those projects or the lack of strict processes and rules in the process of introducing new features, fixes or extensions to the source of the project. The merits of using open source software, lie in the possibility of extending the source, to meet your project specific requirements, also the popular open source projects, usually have big community which is active on all kind of social networks and is taking care of most of the previously mentioned, usability related problems.
-  - With closed source projects, where usually the user pays for the product, it is almost for sure, that the vendor is providing all of the required documentation, examples and support, for the customer to be able to use the software. The tradeoff when using this kind of software is that when you have specific requirements, which are not implemented by the product, you are not able to extend the product in such way that it meets your requirements.
+  - OSS projects are usually created from developers for developers or technical people, which occasionally leads to cases, where segments of the software documentation are incomplete, different segments are written in inconsistent style. The most common reason behind those flaws is the big variety of contributors, the lack of technical writers involved in those projects or the lack of strict processes and rules in the process of introducing new features, fixes or extensions to the `source` of the project. The merits of using open source software, lie in the possibilities of extending the `source`, to meet your project specific requirements, another benefit of the popular open source projects, is that they most likely have big community, which is active on all kind of social networks and is willingly helping free of charge, which solves most of the previously mentioned, usability related problems.
+  - With closed source projects, where the users are customers paying for useable product, it is a given, that the vendor is providing all required documentation, examples and support, for their customers to be able to use the purchased software.
+
+    The tradeoff when using this kind of software, is that when you have specific requirements, which are not implemented by the purchased product, usually you are not able to extend the product, in such ways that it meets your requirements.
 
 ## How does open source companies make money
 
