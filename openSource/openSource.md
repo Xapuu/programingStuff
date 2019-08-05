@@ -42,7 +42,7 @@ On the other hand 'Closed source software' is software which uses closely guarde
 
 - Usability
 
-  - Open source projects are usually created from developers for developers or technical people, which occasionally leads to that, that segments of the software documentation is incomplete, different segments are written inconsitent style. Usually the reason for those flaws is thanks to the big variety of contributors, the lack of technical writers involved in those projects or the lack of strict proceses and rules in the process of introducing new features, fixes or extensions to the source of the project. The merits of using open source software, lie in the possibility of extending the source, to meet your project specific requirements, also the popular open source projects, usually have big community which is active on all kind of social networks and is taking care of most of the previously mentioned, usability related problems.
+  - Open source projects are usually created from developers for developers or technical people, which occasionally leads to that, that segments of the software documentation is incomplete, different segments are written inconsistent style. Usually the reason for those flaws is thanks to the big variety of contributors, the lack of technical writers involved in those projects or the lack of strict processes and rules in the process of introducing new features, fixes or extensions to the source of the project. The merits of using open source software, lie in the possibility of extending the source, to meet your project specific requirements, also the popular open source projects, usually have big community which is active on all kind of social networks and is taking care of most of the previously mentioned, usability related problems.
   - With closed source projects, where usually the user pays for the product, it is almost for sure, that the vendor is providing all of the required documentation, examples and support, for the customer to be able to use the software. The tradeoff when using this kind of software is that when you have specific requirements, which are not implemented by the product, you are not able to extend the product in such way that it meets your requirements.
 
 ## How does open source companies make money
@@ -146,9 +146,11 @@ Keep in mind that as a contributor you are the one obligated to follow the proje
 
 As mentioned before, a must for any OS project is a system for issues tracking and collaboration, if we take for example the [GitHub][12] platform, each project has an issues section where you can log a new issue or find existing one. The more developed project, have a rich set of labels describing the difficulty or the subject of an issue, by using those labels you can filter issues in such way, that you can find the ones falling in your skill set.
 
-If you don't have a favorite project, or just want to contribute something for the fun, but don't know precisely where you can apply your knowledge, you can use one of the following platform for issue huntig :
+If you don't have a favorite project, or just want to contribute something for the fun, but don't know precisely where you can apply your knowledge, you can use [issuehub.io][13] to find a issues that picks your interest.
 
 ## Earn cash
+
+As an open source contributor there is also the oportunity to earn some cash trough platforms like [issuehunt.io][14], which is a platform that provides bounty submissions related to github issues.
 
 # How to become amazing contributor
 
@@ -196,6 +198,7 @@ We talked a lot about open source and stuff, but why is it powerful, if i can in
 [11]: https://github.com/getify
 [12]: https://github.com/
 [13]: http://issuehub.io/
+[14]: https://issuehunt.io/
 
 <!-- How does open source company make money -->
 
