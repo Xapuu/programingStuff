@@ -22,7 +22,7 @@
 
 ## Brief history
 
-## Open source definition 
+## Open source definition
 
 ## Open & Close source
 
@@ -65,7 +65,7 @@ As we are talking about open source and how cool it is, maybe in many of you ari
 
 Some open source projects are making their earnings by providing support and on sight paid training to the consumers of the software. For example if you are company that wants to adopt some open software technology that is to hard to be adopted or the cost to train specialists from zero on their own is to high, for the business is more preferable to pay some experienced specialists to implement the initial setups (installations and etc) and train some specialist, showing them their know-how.
 
-Example: Apache’s Hadoop which is free to use, but is too complex for initial adoption, which is a software designed to detect and handle failures at the application layer, delivering a highly-available service on top of a cluster of computers, each of which may be prone to failures.
+Example: Apache’s Hadoop which is free to use software, that allows for the distributed processing of large data sets, but is too complex for initial adoption.
 
 2 Hosting
 
@@ -75,7 +75,7 @@ Some open source companies provide hosting services for their products, which ar
 
 This concept lies around the strategy that only part of the software whole software `The Core` is free and the rest of the functionality is paid.
 
-For example if you have some kind UI library, and let's say it's core functionality is to have some tables and stuff, which are free of charge for all users and there is a `non-core` or in other words paid set of components for data visualization, that can be used as complimentary components to the core version.
+For example we can take "agGrid" which is a UI library, and it's `core` functionality is under "MIT" license, which means that the users can free of charge  use those core components. There is also a `non-core` or in other words paid set of components, which can be purchesd.
 
 4 Advertisement partners
 
@@ -222,3 +222,6 @@ We talked a lot about open source and stuff, but why is it powerful, if I can in
 [99]: https://api2cart.com/business/5-differences-between-open-source-and-closed-source-software/
 
 <!-- !! Checkout revealjs -->
+
+TODO create snapshot of contributions
+Release Notes 1.37.1
