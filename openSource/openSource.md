@@ -156,7 +156,7 @@ Keep in mind that as a contributor you are the one obligated to follow the proje
 
 ## Find an issue
 
-As mentioned before, a must for any OS project is a system for issues tracking and collaboration, if we take for example the [GitHub][12] platform, each project has an issue section where you can log a new issue or find existing ones. The more developed project has a rich set of labels describing the difficulty or the subject of an issue, by using those labels you can filter issues in such way, that you can find the ones falling in your skillset.
+As mentioned before, a must for any OS project is a system for issues tracking and collaboration, if we take for example the [GitHub][12] platform, each project has an issue section where you can log a new issue or find existing ones. The more developed project has a rich set of labels describing the difficulty or the subject of an issue, by using those labels you can filter issues in such way, that you can find the ones falling in your stillest.
 
 If you don't have a favorite project, or just want to contribute something for the fun, but don't know precisely where you can apply your knowledge, you can use [issuehub.io][13] to find an issue that picks your interest.
 
