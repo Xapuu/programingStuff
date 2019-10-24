@@ -432,7 +432,7 @@ Otherwise the best solution is the creation of separate `npm` packages, as you c
 <!-- # Links / Sources-->
  [Why Google Stores Billions of Lines of Code in a Single Repository][999999]
 
-[999999]:http://delivery.acm.org/10.1145/2860000/2854146/p78-potvin.pdf?ip=213.214.74.127&id=2854146&acc=OA&key=4D4702B0C3E38B35%2E4D4702B0C3E38B35%2E4D4702B0C3E38B35%2E5945DC2EABF3343C&__acm__=1556711275_b8463755a59162a911f853d20d9ae0a6
+[999999]:https://cacm.acm.org/magazines/2016/7/204032-why-google-stores-billions-of-lines-of-code-in-a-single-repository/fulltext
 
 
 [1]: https://dl.acm.org/citation.cfm?id=3133908&picked=formats
