@@ -1,0 +1,44 @@
+{
+    "xtr-title": {
+        "EN": "Title",
+        "BG": "Заглавие",
+        "JPN": "題名",
+        "MISS": "Need translation"
+    },
+    "xtr-orange": {
+        "EN": "Orange",
+        "BG": "Оранжево",
+        "JPN": "オレンジ",
+        "MISS": "Need translation"
+    },
+    "xtr-red": {
+        "EN": "Red",
+        "BG": "Червено",
+        "JPN": "赤",
+        "MISS": "Need translation"
+    },
+    "xtr-green": {
+        "EN": "Green",
+        "BG": "Зелено",
+        "JPN": "緑",
+        "MISS": "Need translation"
+    },
+    "xtr-tile": {
+        "EN": "Tile",
+        "BG": "Плочка",
+        "JPN": "タイル",
+        "MISS": "Need translation"
+    },
+    "xtr-hello-user": {
+        "EN": "Hello -0-",
+        "BG": "Здравей -0-",
+        "JPN": "こんにちは -0-",
+        "MISS": "Need translation"
+    },
+    "xtr-select-language": {
+        "EN": "Select language",
+        "BG": "Избери език",
+        "JPN": "言語を選択する",
+        "MISS": "Need translation"
+    }
+}

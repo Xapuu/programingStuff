@@ -1,0 +1,14 @@
+<div style="display: flex; justify-content: space-around;">
+    <div>
+        <h3>Translated in template</h3>
+        <app-tile *ngFor="let color of colors">
+            {{ 'xtr-'+color | xtr}}
+        </app-tile>
+    </div>
+    <div>
+        <h3>Translated in ts</h3>
+        <app-tile *ngFor="let color of translatedColors">
+            {{ color}}
+        </app-tile>
+    </div>
+</div>

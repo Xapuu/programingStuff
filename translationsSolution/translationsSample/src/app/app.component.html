@@ -1,0 +1,13 @@
+<!-- All stings with xtr prefix and single quote will be matched and added to the translation file -->
+<nav>
+  <div>{{'xtr-select-language'|xtr}}</div>
+  <ul (click)="setLanguage('EN')">English</ul>
+  <ul (click)="setLanguage('BG')">Bulgarian</ul>
+  <ul (click)="setLanguage('JPN')">Japaneses</ul>
+  <ul (click)="setLanguage('MISS')">Missingo</ul>
+</nav>
+
+
+<div>{{'xtr-hello-user'|xtr:['Xapu']}}</div>
+
+<router-outlet></router-outlet>
