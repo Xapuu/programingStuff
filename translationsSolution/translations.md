@@ -1,20 +1,19 @@
 # Simple Translations with Angular && Node
 
-# What is the problem
+# What is the challenges
 
-Every application at certain point ends up in a need of some kind of translation functionality and the implementation of such usually is a drag. One of the main reasons for this to be such a drag, is because oftenly the complexity of this feature is underestimated in the design phase, which leads to multiple re-writes of the translation logic, or being stuck with something hardly usable, because there is just no free time to improve something that kind of work. 
+Every application at a certain point ends up in a need of some kind of translation functionality and the implementation of such usually is a drag. One of the main reasons for this to be such a painful process some times is because the complexity of this feature is usually underestimated in the design phase, which may lead to multiple re-writes of the whole translation logic, or cause a situation where the developers are stuck with something hardly usable because there is just no free time to improve/re-write something that kind of work.
+Of course, there many more challenges that occur especially if we are talking about translations management for mid-size or big applications, but these problems are usually communication or internal process-related and we won't focus on them.
 
-Of course there many more problems that occur especially if we are talking for mid-size or big applications, but this problems are usually communication/process related and I won't focus on them.
+-- Keep in mind while reading this article that we are looking for a simple solution that is usable and makes sense for small to mid-size apps
 
-!! Keep in mind while reading this article that we are looking for simple solution that is usable for small to mid-size apps
-
-# What is out there
+# What is already on the market
 
 As a self-respecting developers the first thing that we are going to do when we receive such a task is to google-it and as expected there are already solutions for our problems.
 
  ## Angular i18n
 
-The thing that we all love about angular is that it is a framework and it got our backs all the time. The angular straight out of the docs solution is the usage of the so called i18n tooling. This tooling allows us to embed and extract translation related information from our html templates with the help of directives and scripts. The extracted data comes in `.xlf` format files, thanks to the tooling we can merge those `.xlf` files, we can find if there are any new translations or remove unused translations and so on.
+The thing that we all love about Angular is that it is a framework, and inside of it there is a solution for every problem. The straight out of the docs Angular solution is the usage of the so-called i18n tooling. This tooling allows us to embed and extract translation-related information from our HTML templates with the help of directives and scripts. The extracted data comes usually in `.xlf` files, thanks to the angular tooling we can merge those `.xlf` files, we can find if there are any new translations or remove unused translations and so on.
 
 
 i18n in action
@@ -33,7 +32,7 @@ which will produce
 </trans-unit>
 ```
 
-The snippets above are the standard config + output of `i18n` , usually the source value is the base language, that is also used as a fallback value, in the cases where translation is missing. 
+This snippets above show the standard usage and output of `i18n`, usually, the source value is in the base language, which is also used as a fallback value, in the cases where the translation is missing.
 
 ```xml
 <trans-unit id="introductionHeader" datatype="html">
@@ -46,16 +45,13 @@ The snippets above are the standard config + output of `i18n` , usually the sour
 
 After you receive the translated files you have to build one application package for each supported language and just serve them, the reason for that is because angular embeds the translated files (in other words the translations are happening compile time not on the user machine) and removes the excessive translation meta (the i18n translation related information), thanks to those two action we get probably the most preferment translation solution for angular.
 
-### Pros
- * Fast
- * Small bundles
- * Angular native
 
-### Cons
- * Hard to reason at first
- * Multiple applications for different languages
- * No dynamic translations
- * No .ts extraction
+
+| <span style='color:green'>Pros</span> | <span style="color:red">Cons</span>           |
+|---------------------------------------|-----------------------------------------------|
+| Fast                                  | Hard to reason at first                       |
+| Small bundles                         | Multiple applications for different languages |
+| Angular native                        | No .ts extraction                             |
 
  ## ngx-translate
 
@@ -80,14 +76,11 @@ translate.get('HELLO').subscribe((res: string) => {
 ...
 ```
 
-### Pros
- * Easy to use
- * Dynamic imports
- * .ts extraction
-
-### Cons
- * Third party library
- * Slower compared to the i18n implementation
+| <span style='color:green'>Pros</span> | <span style="color:red">Cons</span>        |
+|---------------------------------------|--------------------------------------------|
+| Easy to use                           | Slower compared to the i18n implementation |
+| Dynamic imports/translations          | Third party library                        |
+| .ts extraction                        |                                            |
 
  Keep in mind 'slower' doesn't mean slow, so in a environment with normal connection speed and on pretty much most of the machines used today the end-users will not find any speed difference when using `ngx-translate` compared to the `i18n`
 
@@ -96,33 +89,30 @@ translate.get('HELLO').subscribe((res: string) => {
 
 There is also the possibility to use both strategies together, by doing so you can add the extraction of translations from `.ts` and the dynamic translations of values when needed, but definitely that is not a way that i will suggest you to go :)
 
-### Pros
- * Fast
- * Small bundles
- * Mostly Angular native
 
-### Cons
- * Harder to reason at first
- * Multiple applications for different languages
- * Third party library
+| <span style='color:green'>Pros</span> | <span style="color:red">Cons</span>           |
+|---------------------------------------|-----------------------------------------------|
+| Fast                                  | Harder to reason at first                     |
+| Small bundles                         | Multiple applications for different languages |
+| Mostly Angular native                 | Third party library                           |
+
 
 # What are we going to build
 
-So if you had never dealt with translation in angular, you just had a brief introduction of the current popular solutions out there, but probably by now you are asking yourself "WTF where is the 'Simple Translations with Angular && Node' part?", don't worry we are soon starting with the 'Simple' part .
+So if you had never dealt with translation in the context of Angular, you just had a brief introduction of the current translation solutions out there, but probably by now, you are already asking yourself "WTF where is the 'Simple Translations with Angular && Node' part?", don't worry we've just reached that point.
 
 Before we start with the code, let's define the MVP for a translation functionality to be usable and useful
 
-## Translation requirements
-  MVP
-  - Easy way to define/extract keys
-    - From template
-    - From js/ts
-  - Way to translate keys
-  - Way to interpolate translations
-  - Way to export the translations for the translators
+## Translation requirements MVP
+  - [ ] Easy way to define/extract keys 
+    - [ ] From template
+    - [ ] From js/ts
+  - [ ] Way to translate keys
+  - [ ] Way to interpolate translations
+  - [ ] Way to export the translations for the translators
 
 
-By going trough the requirements you are probably thinking why we just don't go with one of the solution that are already out there? The answer is pretty simple most of the apps just don't need all that complexity that comes with solutions like `i18n` and most of the functionality that you are going to use can be written in under 100 lines of code anyway. Don't get me wrong both `ngx-translate` and `i18n` solutions are great and provide a lot of useful functionalities, which we will probably be never used in most of the applications, if you don't believe let me show you the code.
+By going through the requirements you are probably thinking why we just don't go with one of the solutions that are already out there? The answer is pretty simple most of the apps just don't need all that complexity that comes with solutions like `i18n` and most of the functionality that you are going to use can be written in under 100 lines of code anyway. Don't get me wrong both `ngx-translate` and `i18n` solutions are great and provide a lot of useful functionalities, which we will probably be never used in most of the applications if you don't believe let me show you the code.
 
 ```ts
 const fs = require('fs');
@@ -158,7 +148,8 @@ parseTranslations('../', 'xtr');
 // continues in the next snippet
 ```
 
-Here we have quite simple function that based on a starting path will query all subdirectories and read trough all files querying for specific strings, in our case a string inside of single quotes starting with `xtr-`, also while querying the files this function will also save all found keys in the `keys` set. The important part here is that we want to use only `Sync` methods, because we want to parse all files before continuing with the next piece of code.
+Here we have quite a simple function that based on a starting path will query all subdirectories and read trough all files querying for specific strings, in our case a string inside of single quotes starting with `xtr-`, also while querying the files this function will also save all found keys in the `keys` set. The important part here is that we want to use only `Sync` methods because we want to parse all files before continuing with the next piece of code.
+
 
 ```ts
 const fs = require('fs');
@@ -183,7 +174,7 @@ keys.forEach((translationKey) => {
 fs.writeFileSync('./translations.json', JSON.stringify(currentTranslations, null, 4));
 
 ```
-In this snippet we are defining the supported languages which will be supported by us, based on them, on the queried keys and on the `currentTranslations` (this is a `JSON` file containing ant previous translations, initially it should be empty `{}`). While filling the `currentTranslations` object with the new found keys, we are adding the key word 'Need translation' which will be the flag for the translators that something should be added there. After we are done with the whole parsing process we just write the result file.
+In this snippet, we are defining the supported languages which will be supported by us, based on them, on the queried keys and on the `currentTranslations` (this is a `JSON` file containing ant previous translations, initially it should be empty `{}`). While filling the `currentTranslations` object with the newfound keys, we are adding the keyword 'Need translation' which will be the flag for the translators that something should be added there. After we are done with the whole parsing process we just write the result file.
 
 An example output of this function inside the `./translation.json` will look like so:
 
@@ -206,7 +197,7 @@ An example output of this function inside the `./translation.json` will look lik
   },
 ```
 
-We are done with the parsing part, now for the sake of simplicity i will create a separate function that will be dealing with the whole translation logic (or in other words we are still framework agnostic)
+We are done with the parsing part, now for the sake of simplicity I will create a separate function that will be dealing with the whole translation logic (or in other words, we will still beframework agnostic)
 
 ```ts
 import translations from './translations.json';
@@ -289,4 +280,5 @@ The service is even simpler, we can see again the `translate` method which just 
 
 # Summary 
 
-So we fulfilled the MVP requirements that we set, with around 100 lines of code we solved our problem without adding too much complexity to our application, also if we put some more imagination in our current translation implementation, we can see that it can be easily tweaked in such manner that it can work and with other frameworks.
+So we fulfilled the MVP requirements that we set, with around 100 lines of code we solved our problem without adding too much complexity to our application, also if we put some more imagination in our current translation implementation, we can see that it can be easily tweaked in such manner that it can work with any other js based framework.
+The main takeaway should be that depending on the use-case sometimes it's possible to keep things simple and if it possible we should do it.
