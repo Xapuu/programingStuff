@@ -1,0 +1,23 @@
+.article {
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.48);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.48);
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.48);
+
+  margin: 20px;
+  padding: 20px;
+
+  border: 1px solid rgba(0, 0, 0, 0.8);
+}
+
+.tooltip {
+  color: royalblue;
+  font-weight: 300;
+  cursor: pointer;
+}
+
+.visible-tooltip {
+  padding: 20px;
+  border-radius: 4px;
+  border: 2px solid;
+  background: salmon;
+}
